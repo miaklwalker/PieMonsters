@@ -1,0 +1,19 @@
+{
+  "name": "pie_monsters",
+  "version": "0.0.1",
+  "description": "A Card Game Based on the game we made when we were kids",
+  "main": "card.js",
+  "scripts": {
+    "test": "node card.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miaklwalker/PieMonsters.git"
+  },
+  "author": "Michael Walker , Lukas Smith , Brent Durgin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/miaklwalker/PieMonsters/issues"
+  },
+  "homepage": "https://github.com/miaklwalker/PieMonsters#readme"
+}

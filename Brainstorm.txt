@@ -2,13 +2,53 @@ Genre
 ------------
     * Hearthstone-ish
     * Yu Gi Oh -ish
-
+Oven type
+--------
+- Basic Oven - 25 heat
+- DE-LUX Oven - 40 heat - more attack less heat
+- Bakery Oven - 55 heat - more defense more heat
+- PIEfessional Oven - 75 heat - no stats more heat
+- God Oven- 100 heat
 Random Ideas
 ------------------
-     *
+*type
+------
+-- Pie's -- The Most Basic unit of pie monsters
+-- Bosses   -- increase productivity and have effects
+-- Corporate -- better increases in productivity ( Late Game)
+-- Bakery Bunch --  Defend Bakery 
+-- Hooligans -- Attack Bakery - hang out by the opponents dumpster , Maybe it could be upgraded
+-- Loyal Customers - Passive income
+-- Clauses - Spells and same turn moves
+-- Gotcha's - Move to use during the oppenents turn
+-------
+     * Resources  
+        -Oven
+        - Selling instead of sacrificing
+        - pie has a price
+        - gotcha cards
+        - clause's "read the fine print"
+        - Benefits for bosses
+        - Restrictions
+        - Boss increase production
+        - Corporate
+        - Hooligans -can attack the bakery 
+
+        health - (attack - defense);
+        -defense - attack 
+        The field is called the company
+        (If you have "" in the company );
+        the parking lots
 
 Random Cards
 ------------------
+    * Master Pi
+    * You're Fired
+    * 2 cent mike
+    * Billy Payes
+    * Diecan Pie
+    * Magic Hate Ball
+    * The HeadGame
     * Blueberry White Crust
     * Rasperry Burnt Crust
     * Puffin
@@ -55,7 +95,7 @@ Random Cards
 	* Bakery Morgage?
 	* Epic Clash
 	* The Bitch "Boss"
-	* The Ptalian Job
+	* The Italian Job
 	* What's in the bag?
 	* Grandmaster Elements
 	* Fireworks
