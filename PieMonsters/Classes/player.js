@@ -1,4 +1,4 @@
-import Bakery from "./Bakery";
+import Bakery from "./Bakery.js";
 
 export default class Player{
     constructor(){

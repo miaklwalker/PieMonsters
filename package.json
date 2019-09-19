@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "A Card Game Based on the game we made when we were kids",
   "main": "card.js",
+  "type":"module",
   "scripts": {
     "test": "node card.js"
   },
