@@ -23,8 +23,8 @@ export default class Game {
     let parkingLot = loadImage('./PieMonsters/Images/ParkingLot.png').then(image=>{
       context.drawImage(image,0,0)
     })
-    this.player1.bakery.showField(context,300,true)
-
-    this.player2.bakery.showField(context,0,false)
+  
+    this.player1.bakery.showField(context,310,true)
+    this.player2.bakery.showField(context,25,false)
   }
 }

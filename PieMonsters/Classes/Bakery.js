@@ -35,7 +35,7 @@ export default class Bakery {
     for(let spot in this.parkingLot){
       let pie = this.parkingLot[spot]
       if(Object.keys(this.parkingLot[spot]).length !== 0 ){
-        context.drawImage(pie.cardImage,index*120+90,y)
+        context.drawImage(pie.cardImage,index*86+92,y,190,100)
       }
       index++
     }
