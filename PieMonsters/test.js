@@ -1,30 +1,26 @@
 import Game from "./Classes/Game.js";
 import { cards } from "../PieMonsters/Cards/Cards.js";
+import { loadImage } from "./functions/loaders.js";
 
 let canvas = document.createElement("canvas");
 let context = canvas.getContext("2d");
 document.body.appendChild(canvas);
 
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 let game = new Game(context);
-let selection = 1;
-switch (selection) {
-  case 0:
-    game.player1.bakery.summonPie(cards["Blueberry White Crust"]);
-    break;
-  case 1:
-    game.player1.bakery.summonPie(cards["Just Robots"]);
-    break;
-  case 2:
-    game.player1.bakery.summonPie(cards["The Pie-talian Job"]);
-    break;
-    case 3:
-    game.player1.bakery.summonPie(cards["Pugeki"]);
-    break;
-}
+
+game.player1.bakery.summonPie(cards["Blueberry White Crust"], context);
+game.player1.bakery.summonPie(cards["Just Robots"], context);
+game.player2.bakery.summonPie(cards["Blueberry White Crust"], context);
+game.player2.bakery.summonPie(cards["Blueberry White Crust"], context);
+
+//game.player1.bakery.summonPie(cards["Just Robots"],context);
+// game.player1.bakery.summonPie(cards["The Pie-talian Job"],context);
+// game.player1.bakery.summonPie(cards["Pugeki"],context);
 
 function Draw() {
-   context.clearRect(0,0,canvas.width,canvas.height);
-  game.player1.bakery.showField(context);
+  game.showGame(context);
   requestAnimationFrame(Draw);
 }
 Draw();

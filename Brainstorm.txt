@@ -1,3 +1,9 @@
+Libraries
+-----------
+- Anime.Js
+
+
+
 Genre
 ------------
     * Hearthstone-ish

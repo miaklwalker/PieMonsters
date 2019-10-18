@@ -30,17 +30,14 @@ export default class Bakery {
       }
     });
   }
-  showField(context){
+  showField(context,y){
     let index = 0
-    
     for(let spot in this.parkingLot){
-      index++
       let pie = this.parkingLot[spot]
-      if(pie !== undefined){
-
-        console.log(pie)
-      context.drawImage(pie.cardImage,index*120,0)
+      if(Object.keys(this.parkingLot[spot]).length !== 0 ){
+        context.drawImage(pie.cardImage,index*120+90,y)
       }
+      index++
     }
   }
 }

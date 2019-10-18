@@ -1,4 +1,5 @@
 import Player from "./player.js";
+import { loadImage } from "../functions/loaders.js";
 
 export default class Game {
   constructor(context) {
@@ -6,7 +7,8 @@ export default class Game {
     this.player2 = new Player();
     this.turn = false;
     this.phase = "setup";
-    this.context = context
+    this.context = context,
+    this.i = 0 
   }
   Turn(){
     this.turn = !this.Turn;
@@ -15,5 +17,14 @@ export default class Game {
     }else{
       return this.player2
     }
+  }
+  showGame(context){
+    this.i++
+    let parkingLot = loadImage('./PieMonsters/Images/ParkingLot.png').then(image=>{
+      context.drawImage(image,0,0)
+    })
+    this.player1.bakery.showField(context,300,true)
+
+    this.player2.bakery.showField(context,0,false)
   }
 }
