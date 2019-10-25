@@ -13,11 +13,13 @@ let game = new Game(context);
 game.player1.bakery.summonPie(cards["Blueberry White Crust"], context);
 game.player1.bakery.summonPie(cards["Just Robots"], context);
 game.player2.bakery.summonPie(cards["Blueberry White Crust"], context);
+game.player2.bakery.summonPie(cards["The Pie-talian Job"], context);
 game.player2.bakery.summonPie(cards["Blueberry White Crust"], context);
+game.player2.bakery.summonPie(cards["The Pie-talian Job"], context);
 
-//game.player1.bakery.summonPie(cards["Just Robots"],context);
-// game.player1.bakery.summonPie(cards["The Pie-talian Job"],context);
-// game.player1.bakery.summonPie(cards["Pugeki"],context);
+game.player1.bakery.summonPie(cards["Just Robots"],context);
+game.player1.bakery.summonPie(cards["The Pie-talian Job"],context);
+game.player1.bakery.summonPie(cards["Pugeki"],context);
 
 function Draw() {
   game.showGame(context);
