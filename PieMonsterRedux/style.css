@@ -9,7 +9,11 @@
   display: grid;
   grid-template-columns: 0.6fr 0.6fr 0.6fr 0.6fr 0.6fr 0.6fr 3.8fr;
   grid-template-rows: 1fr 1.4fr 0.2fr 1.4fr 1fr;
-  grid-template-areas: "DumpsterOpp CorprateOpp BakeryOpp BakeryOpp BakeryOpp ManagerOpp StatsOpp" "BankOpp Field Field Field Field Field RecipeOpp" ". Field Field Field Field Field ." "BankPlayer Field Field Field Field Field StatsPlayer" "DumpsterPlayer CorpratePlayer BakeryPlayer BakeryPlayer BakeryPlayer ManagerPlayer recipeOpp";
+  grid-template-areas: "DumpsterOpp CorprateOpp BakeryOpp BakeryOpp BakeryOpp ManagerOpp StatsOpp"
+   "BankOpp Field Field Field Field Field RecipeOpp"
+    ". Field Field Field Field Field ."
+     "BankPlayer Field Field Field Field Field recipePlayer"
+      "DumpsterPlayer CorpratePlayer BakeryPlayer BakeryPlayer BakeryPlayer ManagerPlayer StatsPlayer";
 }
 
 .Field {
@@ -113,7 +117,7 @@
 
 .StatsPlayer { grid-area: StatsPlayer; }
 
-.recipeOpp { grid-area: recipeOpp; }
+.recipePlayer { grid-area: recipePlayer; }
 
 .BankOpp { grid-area: BankOpp; }
 

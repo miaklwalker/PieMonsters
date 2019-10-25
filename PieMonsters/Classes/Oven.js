@@ -1,28 +1,25 @@
-import { loadImage } from "../functions/loaders.js";
-import wrapText from "../functions/wrapText.js";
 import createCard from "../functions/createCard.js";
+import { cardPop } from "../../PieMonsterRedux/src/CardPop.js";
 
 export default class Oven{
     constructor(){
         this.heat=50;
         this.stage = 0;
         this.remainingHeat = 50
-        this.remade = new Map();
     }
-    makePie(pie){
-        let buffer = document.createElement('canvas')
-        let context = buffer.getContext('2d');
-        this.remainingHeat-= pie.cost;
-        if(this.remade.has(pie)){
-            return this.remade.get(pie)
+    bakePie(pie,lot){
+        if(this.remainingHeat-pie.cost>=0){
+            this.remainingHeat-=pie.cost;
+        let canvas = document.createElement('canvas')
+        createCard(canvas.getContext('2d'),pie)
+        canvas.width=60
+        canvas.height=90
+        canvas.addEventListener('click',cardPop(canvas))
+        lot.parkinglot.children[lot.openSlot].appendChild(canvas)
+        lot.openSlot++
         }else{
-            createCard(context,pie)
-        this.remade.set(pie,buffer);
-    }
-        return buffer
-    }
-
-    get Tempurature(){
-        return this.remainingHeat
+            alert(`Are you Trynna Turn your oven into an fridge ? 
+            You can't make ${pie.name} with  ${this.remainingHeat} heat left`)
+        }
     }
 }

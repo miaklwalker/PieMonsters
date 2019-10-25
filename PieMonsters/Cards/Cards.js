@@ -366,7 +366,7 @@
     flavorText: "",
   },
   "The Pie-talian Job": {
-    name: "The Italian Job",
+    name: "The Pie-talian Job",
     attack: 0,
     defense: 0,
     cost:0,
