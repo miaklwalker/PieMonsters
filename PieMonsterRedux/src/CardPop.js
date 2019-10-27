@@ -1,12 +1,10 @@
-import anime from "../../PieMonsters/anime-master/src/index.js";
+import anime from "../../node_modules/animejs/lib/anime.js"
 
 
 export let cardPop = (canvas)=>{
     let clicked = false;
     return()=>{
     clicked=!clicked
-    console.log(canvas)
-    console.log('clicked')
     if(clicked){
         anime({
             targets: canvas,
@@ -24,3 +22,18 @@ export let cardPop = (canvas)=>{
     }
 }
 }
+export let summonSlide=(canvas,startingPos)=>{
+    anime({
+        targets: canvas,
+        keyframes: [
+            {translateX: [startingPos,startingPos]},
+            {translateY: 40},
+            {translateX: 0},
+            {translateY: 0}
+        ],
+        duration: 4000,
+        easing: 'easeOutElastic(1, .8)',
+        loop: false
+      }); 
+}
+

@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "A Card Game Based on the game we made when we were kids",
   "main": "card.js",
-  "type":"module",
+  "type": "module",
   "scripts": {
     "test": "node card.js"
   },
@@ -16,5 +16,12 @@
   "bugs": {
     "url": "https://github.com/miaklwalker/PieMonsters/issues"
   },
-  "homepage": "https://github.com/miaklwalker/PieMonsters#readme"
+  "homepage": "https://github.com/miaklwalker/PieMonsters#readme",
+  "keywords": [
+    "PieMonsters"
+  ],
+  "dependencies": {
+    "animejs": "^3.1.0",
+    "typesettable": "^4.1.0"
+  }
 }

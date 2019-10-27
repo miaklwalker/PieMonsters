@@ -1,6 +1,6 @@
 import Oven from "./Oven.js";
 import Parkinglot from "./parkingLot.js";
-import anime from "../anime-master/src/index.js";
+import anime from "../../node_modules/animejs/lib/anime.js"
 
 export default class Bakery {
   constructor(id) {
@@ -11,9 +11,9 @@ export default class Bakery {
     this.once = false
     this.id=''
   }
-  summonPie(pie) {
+  summonPie(pie,location) {
     this.ovenTemp = this.oven.remainingHeat
-    this.oven.bakePie(pie,this.parkingLot)
+    this.oven.bakePie(pie,this.parkingLot,location)
     this.displayStats(this.id);
   }
   displayStats(id){

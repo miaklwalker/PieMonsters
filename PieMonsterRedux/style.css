@@ -62,6 +62,7 @@
 .ParkingLotPlayer div canvas{
   position: relative;
   top:77px;
+  image-rendering: optimizeQuality;
 }
 .Slot1Player { grid-area: Slot1Player; }
 
@@ -113,12 +114,25 @@
 
 .StatsOpp { grid-area: StatsOpp; }
 
-.RecipeOpp { grid-area: RecipeOpp; }
+.RecipeOpp { 
+  grid-area: RecipeOpp; 
+  background-image:url('../PieMonsters/Images/book.jpg');
+  background-size: 100% 110%;
+}
 
 .StatsPlayer { grid-area: StatsPlayer; }
 
-.recipePlayer { grid-area: recipePlayer; }
+.recipePlayer { grid-area: recipePlayer;
+  background-image:url('../PieMonsters/Images/book.jpg');
+  background-size: 100% 110%; 
+}
 
+.recipePlayer canvas{
+  padding: 30px 40px 0px 0px;
+}
+.RecipeOpp canvas{
+  padding: 30px 40px 0px 0px;
+}
 .BankOpp { grid-area: BankOpp; }
 
 .BankPlayer { grid-area: BankPlayer; }

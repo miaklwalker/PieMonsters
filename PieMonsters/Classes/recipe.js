@@ -1,17 +1,19 @@
 import { cards } from "../Cards/Cards.js";
+import createCard from "../functions/createCard.js";
+import { cardPop } from "../../PieMonsterRedux/src/CardPop.js";
+import { createHiDPICanvas } from "../functions/canvasMaker.js";
 
-export default function recipe(recipeDiv,recipes,bakery){
-    let select = document.createElement('select');
-recipes.forEach(recipe => {
-    let option = document.createElement('option');
-    option.innerText=recipe.name
-    select.appendChild(option)
-});
-    let button = document.createElement('button');
-    button.innerText='Bake Now';
-    button.addEventListener('click',()=>{
-        bakery.summonPie(cards[select.value])
-    })
-    recipeDiv.appendChild(select);
-    recipeDiv.appendChild(button)
+let demoCard = (pie, recipeDiv, bakery) => {
+  let canvas = createHiDPICanvas(60, 90);
+  createCard(canvas.getContext("2d"), pie);
+  canvas.addEventListener("click", () =>{
+      let startPoint =canvas.getBoundingClientRect()
+    bakery.summonPie(pie,startPoint.x )
+  });
+  recipeDiv.appendChild(canvas);
+};
+export default function recipe(recipeDiv, recipes, bakery) {
+  recipes.forEach(recipe => {
+    demoCard(recipe, recipeDiv, bakery);
+  });
 }
