@@ -12,7 +12,7 @@ export default class Oven{
             this.remainingHeat-=pie.cost;
         let canvas = createHiDPICanvas(60,90)
         createCard(canvas.getContext('2d'),pie)
-        canvas.addEventListener('click',cardPop(canvas))
+        canvas.addEventListener('click',cardPop(canvas,pie,lot))
         lot.parkinglot.children[lot.openSlot].appendChild(canvas)
         let newCardPos = canvas.getBoundingClientRect().x
             summonSlide(canvas,start-newCardPos)
