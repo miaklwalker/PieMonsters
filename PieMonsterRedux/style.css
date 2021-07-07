@@ -1,0 +1,138 @@
+*{
+  text-align: center;
+}
+:root{
+  --heightForField:150px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 0.6fr 0.6fr 0.6fr 0.6fr 0.6fr 0.6fr 3.8fr;
+  grid-template-rows: 1fr 1.4fr 0.2fr 1.4fr 1fr;
+  grid-template-areas: "DumpsterOpp CorprateOpp BakeryOpp BakeryOpp BakeryOpp ManagerOpp StatsOpp"
+   "BankOpp Field Field Field Field Field RecipeOpp"
+    ". Field Field Field Field Field ."
+     "BankPlayer Field Field Field Field Field recipePlayer"
+      "DumpsterPlayer CorpratePlayer BakeryPlayer BakeryPlayer BakeryPlayer ManagerPlayer StatsPlayer";
+}
+
+.Field {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1.4fr 0.2fr 1.4fr;
+  grid-template-areas: "ParkingLotOpp ParkingLotOpp ParkingLotOpp ParkingLotOpp ParkingLotOpp" ". . . . ." "ParkingLotPlayer ParkingLotPlayer ParkingLotPlayer ParkingLotPlayer ParkingLotPlayer";
+  grid-area: Field;
+  background-image:url('../PieMonsters/Images/ParkingLot.png');
+  background-position: 50%;
+  background-size:140% 100%;
+}
+
+.ParkingLotOpp {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "slot1Opp Slot2Opp Slot3Opp Slot4Opp Slot5Opp";
+  grid-area: ParkingLotOpp;
+  height:var(--heightForField);
+}
+.ParkingLotOpp div img{
+  transform:rotate(180deg);
+}
+
+
+.slot1Opp { grid-area: slot1Opp; }
+
+.Slot2Opp { grid-area: Slot2Opp; }
+
+.Slot3Opp { grid-area: Slot3Opp; }
+
+.Slot4Opp { grid-area: Slot4Opp; }
+
+.Slot5Opp { grid-area: Slot5Opp; }
+
+.ParkingLotPlayer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "Slot1Player Slot2Player Slot3Player Slot4Player Slot5Player";
+  grid-area: ParkingLotPlayer;
+  height:var(--heightForField)
+}
+
+.ParkingLotPlayer div canvas{
+  position: relative;
+  top:77px;
+  image-rendering: optimizeQuality;
+}
+.Slot1Player { grid-area: Slot1Player; }
+
+.Slot2Player { grid-area: Slot2Player; }
+
+.Slot3Player { grid-area: Slot3Player; }
+
+.Slot4Player { grid-area: Slot4Player; }
+
+.Slot5Player { grid-area: Slot5Player; }
+
+.BakeryPlayer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: ". . .";
+  grid-area: BakeryPlayer;
+}
+
+.BakeryOpp {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: ". . .";
+  grid-area: BakeryOpp;
+}
+
+.ManagerPlayer { grid-area: ManagerPlayer; }
+
+.ManagerOpp { grid-area: ManagerOpp; }
+
+.CorprateOpp { grid-area: CorprateOpp; }
+
+.CorpratePlayer { grid-area: CorpratePlayer; }
+
+.DumpsterPlayer {
+  grid-area: DumpsterPlayer;
+  background-image:url('../PieMonsters/Images/dumpster_green.gif');
+  background-size: 100% 100%;
+
+
+}
+
+.DumpsterOpp { 
+  grid-area: DumpsterOpp;
+  background-image:url('../PieMonsters/Images/dumpster_green.gif');
+  background-size: 100% 100%;
+ }
+
+.StatsOpp { grid-area: StatsOpp; }
+
+.RecipeOpp { 
+  grid-area: RecipeOpp; 
+  background-image:url('../PieMonsters/Images/book.jpg');
+  background-size: 100% 110%;
+}
+
+.StatsPlayer { grid-area: StatsPlayer; }
+
+.recipePlayer { grid-area: recipePlayer;
+  background-image:url('../PieMonsters/Images/book.jpg');
+  background-size: 100% 110%; 
+}
+
+.recipePlayer canvas{
+  padding: 30px 40px 0px 0px;
+}
+.RecipeOpp canvas{
+  padding: 30px 40px 0px 0px;
+}
+.BankOpp { grid-area: BankOpp; }
+
+.BankPlayer { grid-area: BankPlayer; }

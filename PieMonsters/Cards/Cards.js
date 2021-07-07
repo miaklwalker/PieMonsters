@@ -1,20 +1,23 @@
- let cards = {
+ export let cards = {
   "Blueberry White Crust": {
     name: "Blueberry White Crust",
     price:5,
+    cost:25,
+    location:[342,27,145,127],
     attack: 0,
     defense: 0,
     type: "pie",
-    flavorText: "this legendary pie is an engine of destruction"
+    flavorText: "This legendary pie is an engine of destruction"
   },
 
   "Rasperry Burnt Crust": {
     name: "Rasperry Burnt Crust",
     price:5,
+    cost:15,
     attack: 0,
     defense: 0,
     type: "pie",
-    flavorText: "his crust is burnt so you know he's evil"
+    flavorText: "His crust is burnt so you know he's evil"
   },
 
   "Puffin": { 
@@ -23,7 +26,7 @@
       attack: 0, 
       defense: 0, 
       type: "PieGod",
-       flavorText: "i am not a bird!",
+       flavorText: "I am not a bird!",
        effect(){
          console.log('You Win!!')
        }
@@ -89,14 +92,17 @@
       name: "Pugeki", 
       attack: 0,
        defense: 0, 
-       type: "",
-        flavorText: "Clause",
+       cost:0,
+       location:[180,27,145,127],
+       type: "Clause",
+        flavorText: "RAAAIIINNN BOOWWW",
         effect(){},
 
      },
   "Basic Pie Soldier": {
     name: "Basic Pie Soldier",
     price:4,
+    cost:5,
     attack: 0,
     defense: 0,
     type: "Pie",
@@ -309,8 +315,10 @@
     name: "Just Robots",
     attack: 0,
     defense: 0,
+    cost:10,
+    location:[17,26,145,127],
     type: "Loyal Customers",
-    flavorText: "you think they are for justice?"
+    flavorText: "You think they are for justice?!?"
   },
   "Brent's Approval!": {
     name: "Brent's Approval!",
@@ -358,9 +366,11 @@
     flavorText: "",
   },
   "The Pie-talian Job": {
-    name: "The Italian Job",
+    name: "The Pie-talian Job",
     attack: 0,
     defense: 0,
+    cost:0,
+    location:[504,26,145,127],
     type: "Gotcha",
     flavorText: "we can't"
   },
@@ -526,6 +536,3 @@
     flavorText: "Everyone likes me"
   },
 };
-
-
-module.exports = cards
